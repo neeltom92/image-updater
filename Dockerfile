@@ -1,5 +1,4 @@
-FROM arm64v8/golang:1.12.0-alpine3.9
-
+FROM --platform=linux/arm64 arm64v8/golang:1.12.0-alpine3.9
 RUN mkdir /opt/app
 ADD . /opt/app
 WORKDIR /opt/app
