@@ -4,8 +4,8 @@ FROM arm64v8/golang:1.12.0-alpine3.9
 ## We create an /app directory within our
 ## image that will hold our application source
 ## files
-RUN apk add --no-cache gcc musl-dev
 
+RUN apk add --no-cache build-base
 RUN mkdir /app
 ## We copy everything in the root directory
 ## into our /app directory
