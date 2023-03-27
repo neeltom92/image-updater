@@ -5,7 +5,7 @@ FROM arm64v8/golang:1.12.0-alpine3.9
 ## image that will hold our application source
 ## files
 
-RUN apk add --no-cache build-base
+
 RUN mkdir /app
 ## We copy everything in the root directory
 ## into our /app directory
