@@ -18,7 +18,7 @@ jobs:
         run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --platform linux/arm64 --tag neeldviewio/dview-app1:latest-arm64
+        run: docker build . --file Dockerfile --tag neeldviewio/dview-app1:latest
 
       - name: Docker Push
-        run: docker push neeldviewio/dview-app1:latest-arm64
+        run: docker push neeldviewio/dview-app1:latest
