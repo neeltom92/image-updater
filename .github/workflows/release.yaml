@@ -3,15 +3,11 @@
 name: Release-helm-version
 on:
   push:
-    branches: [ main ]
-      # Generally you probably do not want to run this on branches because
-      # you'll get a new Helm Chart version commit for every single commit into
-      # your branch. It would be very noisy.
-      - '!*'
+    branches:
+      - main
     tags:
-      # Trigger this on the tag format that your developers are using for the
-      # core application/docker-image tag.
       - v*
+
 jobs:
   release:
     runs-on: ubuntu-latest
