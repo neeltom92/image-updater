@@ -17,12 +17,10 @@ jobs:
           fetch-depth: '0'  # this is important for the git writeback
 
       - name: Retag Docker Image for Production
-        uses: nextdoor/docker-image-retag-action@v1.3.0
-        with:
-          ...
+        uses: Nextdoor/docker-image-retag-action@v1.3.0
 
       - name: Update Helm Chart Values
-        uses: nextdoor/helm-set-image-tag-action@v2.0.0
+        uses: Nextdoor/helm-set-image-tag-action@v2.0.0
         with:
           # A comma-separated list of Values files to update. We default to
           # `chart/values.yaml`, but you can patch multiple values files at once if
@@ -76,4 +74,26 @@ jobs:
 
           # Whether to commit and push to the remote repository, default to true.
           # You can modify multiple keys and values in the values file by calling
-          # this action multiple times but only setting commit_and_push
+          # this action multiple times but only setting commit_and_push to true in
+          # the last call.
+          #
+          # commit_and_push: true
+
+          # Override the message used in the git commit.
+          #
+          # commit_message: Automated commit on behalf-of ${{ github.actor }}
+
+          # Optional commit arguments
+          #
+          # commit_options: ''
+
+          # Set the action to run in `set -x` mode for very verbose logging. Set
+          # to `true` or `false`.
+          #
+          # verbose: false
+
+          # Optionally run the action in 'dry' mode - where all of the normal
+          # actions happen, but no `git commit` happens. Useful for initial testing
+          # of the configuration. Set to `true` or `false`.
+          #
+          # dry: false
