@@ -1,6 +1,6 @@
 FROM golang:1.12.0-alpine3.9
 RUN mkdir /app
-ADD . /app
+ADD main.go /app
 WORKDIR /app
 ## Add this go mod download command to pull in any dependencies
 RUN go mod download
