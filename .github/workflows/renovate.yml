@@ -13,4 +13,4 @@ jobs:
       - name: Install Renovate
         run: npm install -g renovate
       - name: Run Renovate
-        run: renovate --token ${{ secrets.RENOVATE_TOKEN }} --repositories neeltom92/image-updater --autodiscover 
+        run: renovate --token ${{ secrets.RENOVATE_TOKEN }} --platform github --dep neeltom92/image-updater --autodiscover
