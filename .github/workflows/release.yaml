@@ -17,10 +17,10 @@ jobs:
           fetch-depth: '0'  # this is important for the git writeback
 
       - name: Retag Docker Image for Production
-        uses: Nextdoor/docker-image-retag-action@v1.3.0
+        uses: Nextdoor/docker-image-retag-action@v1.4.0
 
       - name: Update Helm Chart Values
-        uses: Nextdoor/helm-set-image-tag-action@v2.0.0
+        uses: Nextdoor/helm-set-image-tag-action@v2.1.0
         with:
           # A comma-separated list of Values files to update. We default to
           # `chart/values.yaml`, but you can patch multiple values files at once if
