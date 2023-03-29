@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/neeltom92/image-updater/compare/v1.0.6...v1.0.7) (2023-03-29)
+
+
+### Fix
+
+* updated ([575d784](https://github.com/neeltom92/image-updater/commit/575d784bcd638abc8162d41c0fc8fbff546a7b89))
+
 ## [1.0.6](https://github.com/neeltom92/image-updater/compare/v1.0.5...v1.0.6) (2023-03-29)
 
 
