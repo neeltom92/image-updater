@@ -10,14 +10,13 @@ import (
 )
 
 func main() {
-	// Clone the repository
+	// Get the latest tag from the remote repository
 	repo, err := git.PlainClone("neeltom92/image-updater", false, &git.CloneOptions{})
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
-	// Get the latest tag
 	tags, err := repo.Tags()
 	if err != nil {
 		fmt.Println(err)

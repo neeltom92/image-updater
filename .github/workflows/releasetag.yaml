@@ -1,4 +1,5 @@
 name: Semantic Version
+
 on:
   push:
     branches:
@@ -11,16 +12,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Git
-        run: sudo apt-get update && sudo apt-get install git -y
-
       - name: Install Go
         uses: actions/setup-go@v2
         with:
           go-version: '1.17'
 
       - name: Get required packages
-        run: go get -u github.com/go-git/go-git/v5 github.com/Masterminds/semver
+        run: |
+          go get -u github.com/go-git/go-git/v5
+          go get -u github.com/Masterminds/semver
 
       - name: Get semantic version
         run: go run release.go
