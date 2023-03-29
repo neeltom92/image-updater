@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/neeltom92/image-updater/compare/v1.0.4...v1.0.5) (2023-03-29)
+
+
+### Fix
+
+* updated the charts ([fd2e4d5](https://github.com/neeltom92/image-updater/commit/fd2e4d5ba33b26d22b7d1403bc76173ed3842d81))
+
 ## [1.0.4](https://github.com/neeltom92/image-updater/compare/v1.0.3...v1.0.4) (2023-03-29)
 
 
