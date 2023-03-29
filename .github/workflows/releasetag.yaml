@@ -19,9 +19,8 @@ jobs:
         with:
           go-version: '1.17'
 
+      - name: Get required packages
+        run: go get -u github.com/go-git/go-git/v5 github.com/Masterminds/semver
+
       - name: Get semantic version
-        run: |
-          go get github.com/go-git/go-git/v5
-          go get github.com/go-git/go-git/v5/plumbing/object
-          go get github.com/go-git/go-git/v5/plumbing/semver
-          go run release.go
+        run: go run release.go
