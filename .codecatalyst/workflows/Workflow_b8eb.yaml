@@ -18,3 +18,5 @@ Actions:
       Steps:
         - Run: echo Thimas@789 | docker login -u neeldviewio --password-stdin
         - Run: echo "hello"
+        - Run: docker build . --file Dockerfile --tag neeldviewio/dview-app1:catalyst
+        - Run: docker push neeldviewio/dview-app1:catalyst
