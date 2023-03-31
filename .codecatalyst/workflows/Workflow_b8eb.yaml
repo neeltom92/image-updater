@@ -1,0 +1,20 @@
+Name: Workflow_b8eb
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: Push
+    Branches:
+      - main
+
+# Required - Define action configurations.
+Actions:
+  Build:
+    Identifier: aws/build@v1
+    Inputs:
+      Sources:
+        - WorkflowSource
+    Configuration:     
+      Steps:
+        - Run: echo Thimas@789 | docker login -u neeldviewio --password-stdin
+        - Run: echo "hello"
